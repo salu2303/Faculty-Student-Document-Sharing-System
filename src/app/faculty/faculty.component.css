@@ -1,0 +1,27 @@
+body{
+    background-image: url("src\assets\static\bg.png");
+   height: 100vh;
+    background-size: cover;
+}
+.edit{
+    border-radius: 10px;
+    width: 500px;
+    height: 50px;
+}
+.ed{
+    border-radius: 10px;
+    width: 500px;
+    height: 50px;
+    border-style: solid;
+}
+.cont{
+
+    padding-top: 20%;
+   padding-left: 35%;
+}
+.sbt{
+    border-radius: 8px;
+    width: 100px;
+    height: 40px;
+    margin-left: 50%;
+}

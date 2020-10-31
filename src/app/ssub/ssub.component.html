@@ -1,0 +1,98 @@
+<app-navstu></app-navstu>
+<main class="py-5">
+    <br>
+    <div class="container text-center">
+     
+        <div class="container text-center">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <h4><i class="em em-blue_book" aria-role="presentation" aria-label="BLUE BOOK"></i>
+                                Books And Lecture Materials!!</h4>
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <div *ngFor="let d of fac">
+                            <a class="btn btn-lg btn-dark btn-block" role="button" id={{d.fac_sub}}
+                                (click)="disp(d.fac_sub)">{{d.fac_sub}}</a>
+                
+                        </div>
+                      
+                         </tr>
+
+                   
+                         
+                         
+    
+                </tbody>
+
+
+            </table>
+
+        </div>
+
+        <div class="container text-center">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Here's your material</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        
+                    <tr *ngFor="let do of book">
+                        <a class="btn  btn-block btn-dark btn-block" href="assets\adminnotice\{{do.path}}" download={{do.path}}
+                        role="button">
+                        {{do.path}}
+                    </a>  </tr>
+                    </tbody>
+        </table>
+        </div>
+
+    </div>
+  <!--  <div class="container text-center">
+        <div *ngFor="let d of fac">
+            <a class="btn btn-lg btn-primary" role="button" id={{d.fac_sub}}
+                (click)="disp(d.fac_sub)">{{d.fac_sub}}</a><br><br>
+
+        </div>
+        <div class="container text-center">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <h4>Books And Lecture Materials!!</h4>
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    <tr *ngFor="let do of book">
+                        <a class="btn  btn-block btn-dark" href="assets\adminnotice\{{do.path}}" download={{do.path}}
+                            role="button">
+                            {{do.path}}
+                        </a>
+                    </tr>
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+      
+
+    </div>-->
+</main>
+<app-footer></app-footer>

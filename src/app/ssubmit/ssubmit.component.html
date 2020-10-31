@@ -1,0 +1,99 @@
+<app-navstu></app-navstu>
+<main class="py-5">
+    <br>
+
+    <div class="container text-center">
+        <p style=" font-size: xx-large;">SUBMITION</p>
+        <table class="table table-dark table-hover">
+
+                <thead>
+                <tr>
+                    <th scope="col">Subject</th>
+                    <th scope="col">View Assignment</th>
+                </tr>
+            </thead>
+
+
+            <tbody>
+                <tr *ngFor="let d of fac">
+                    <td> <a  id={{d.fac_sub}}
+                            (click)="uplood(d.fac_branch,d.fac_sem,d.fac_sub)">{{d.fac_sub}}</a>
+                    </td>
+                    
+                       <td>
+                    
+                        <a class="btn btn-success  " (click)="disp(d.fac_sub)" role="button">View</a>
+                       </td>
+                <!--    <td>
+                        <form class="md-form" [formGroup]="myform">
+                            <input type="file" id="upld" (click)="uplood(d.fac_branch,d.fac_sem,d.fac_sub)"
+                                (change)="onFileChange($event)">
+
+                            <a class="btn btn-success  " (click)="save()" role="button">UPLOAD</a>
+
+                        </form>
+                    </td>-->
+                </tr>
+
+            </tbody>
+
+
+        </table>
+        <div class="container text-center">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Here's your Assignments..</th>
+                        <th scope="col">Submit your Assignments</th>
+                        <th scope="col">Status</th>
+                        
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        
+                    <tr>
+                        <td>
+                            <div  *ngFor="let do of ass">
+                        <a class="btn  btn-block btn-dark btn-block" href="assets\adminnotice\{{do.path}}" download={{do.path}}
+                        role="button">
+                        {{do.path}}
+                    </a></div> </td>
+                <td>
+                    <div  *ngFor="let d of ass">
+                    <form class="md-form" [formGroup]="myform">
+                        <input type="file" id="upld" (click)="uplood(d.branch,d.sem,d.subject,d.path)"
+                            (change)="onFileChange($event)">
+
+                        <a class="btn btn-success  " (click)="save()" role="button">UPLOAD</a> &nbsp;
+                        <a class="btn btn-success  "  (click)="status(d.path)" role="button">STATUS</a>
+                    </form></div>
+                </td>
+                <td>
+                    <div class="container text-center">
+                    <span class="label label-danger">{{msg}}</span></div>
+                 </td>
+               
+                </tr>
+                    </tbody>
+        </table>
+        </div>
+</div>
+       <!-- <div *ngFor="let d of fac">
+            <button class="btn btn-lg btn-primary" id={{d.fac_sub}}
+                (click)="uplood(d.fac_branch,d.fac_sem,d.fac_sub)">{{d.fac_sub}}</button><br><br>
+
+            <form class="md-form" [formGroup]="myform">
+                <input type="file" id="upld" (click)="uplood(d.fac_branch,d.fac_sem,d.fac_sub)"
+                    (change)="onFileChange($event)">
+
+                <a class="btn btn-success  " (click)="save()" role="button">UPLOAD</a>
+
+            </form>
+
+        </div>-->
+
+    
+</main>
+<app-footer></app-footer>

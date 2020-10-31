@@ -1,0 +1,107 @@
+<app-navadmin></app-navadmin>
+<body>
+<div class="container " style="margin-left: 0px;"><br>
+    <div class="row">
+        <div class="col-md-3 " style="background-color: black;height: 650px;">
+            <br>
+            <div class="row">
+                <div class="col">
+                    <a class="nav-link text-center" routerLink="/addstudent" id="dd">ADD STUDENT
+                        <span class="sr-only">(current)</span></a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <a class="nav-link text-center" routerLink="/remstudent" id="dd">REMOVE STUDENT
+                        <span class="sr-only">(current)</span></a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <a class="nav-link text-center" routerLink="/addfaculty" id="dd">ADD FACULTY
+                        <span class="sr-only">(current)</span></a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <a class="nav-link text-center" routerLink="/remfaculty" id="dd">REMOVE FACULTY
+                        <span class="sr-only">(current)</span></a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <a class="nav-link text-center" routerLink="/addann" id="d">UPLOAD NOTICE <span
+                            class="sr-only">(current)</span></a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <a class="nav-link text-center" routerLink="/viewdet" id="dd">VIEW DETAILS <span
+                            class="sr-only">(current)</span></a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </div>
+            <br>
+
+
+        </div>
+
+        <div class="col-md-9 ">
+            <br>
+             <b style="font-size: x-large;">ADMIN CAN UPLOAD NOTICE HERE</b>
+            <h6 style="text-align: center;"><li>Select for whom this notice</li></h6>
+                               <select class="form-control form-control-lg" [(ngModel)]="who">
+                    <option>{{who}}</option>
+                    <option>faculty</option>
+                    <option>student</option>
+                    <option>both</option>
+                    
+                </select>
+
+                <br>
+            <form class="md-form" [formGroup]="myform">
+                
+                <i class="em em-orange_book" aria-role="presentation" aria-label="ORANGE BOOK"></i>       <input type="file" id="upld" (change)="onFileChange($event)">
+                
+                <a  class="btn btn-success  " (click)="save()" role="button">UPLOAD</a>
+            </form><br>
+            <a  class="btn btn-success btn-block" (click)="viewall()" role="button">View all notices</a><br>
+            
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;color:coral;" scope="col">All Notices Here!!</th>
+                       
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    
+    
+                        <tr *ngFor="let d of nnot">
+                            <a class="btn  btn-block btn-dark" href="assets\adminnotice\{{d.fpath}}" 
+                            download= {{d.fpath}} role="button">
+                            {{d.fpath}}
+                          </a> 
+                        </tr>
+                    
+                </tbody>
+    
+    
+            </table>
+          
+        </div>
+    </div>
+</div>
+</body>
+<app-footer></app-footer>

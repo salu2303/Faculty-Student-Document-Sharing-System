@@ -1,0 +1,35 @@
+<app-navadmin></app-navadmin>
+<br><br>
+<body>
+<div class="container text-center">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/static/{{admin.path}}" alt="Card image cap">
+        <div class="card-body">
+            <table class="table table-dark table-hover">
+
+
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <td> {{admin.admin_name}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Branch</th>
+                        <td> {{admin.admin_pswd}}</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="col">Semester</th>
+                        <td> {{admin.admin_branch}}</td>
+
+                    </tr>
+                </thead>
+
+            </table>
+            <a role="button" class="btn btn-primary">Update</a>
+        </div>
+    </div>
+
+</div>
+</body>
+<app-footer></app-footer>

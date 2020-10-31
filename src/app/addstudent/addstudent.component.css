@@ -1,0 +1,29 @@
+.col-md-9{
+    padding-left: 425px;
+}
+@media screen and (max-width: 600px) {
+    .col-md-9 
+    {
+        padding-left: 0%;
+    }
+}
+body{
+    background-image: url("src\assets\static\dem2.jpg");
+    background-size: cover;
+}
+#d:hover{
+    background-color:white;
+    color: black;
+    box-shadow: 0 4px gray;
+}
+#d{
+    color:coral;
+}
+#dd:hover{
+    background-color:white;
+    color: black;
+    box-shadow: 0 4px gray;
+}
+#dd{
+    color:whitesmoke;
+}

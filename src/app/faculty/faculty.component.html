@@ -1,0 +1,106 @@
+<body>
+<div class="col-md-12 text-center">
+    <div class="container">
+
+
+        <div class="cont">
+            <div class="c">
+
+                <table>
+
+                    <tr>
+                        <td>
+                            <div class="col-md-12 text-center">
+                                <b><label style="color:blanchedalmond;" style="font-family: monospace"
+                                        style="font-size: xx-small;">SIGNUP FORM</label></b>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-group">
+
+                                <input type="text" class="form-control form-control-lg" [(ngModel)]="name"
+                                    placeholder="Enter username" required>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+
+                                <input type="password" class="form-control form-control-lg" [(ngModel)]="pswd"
+                                    placeholder="Enter password" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="col">
+
+                                    <select class="form-control form-control-lg" [(ngModel)]="branch">
+                                        <option>{{branch}}</option>
+                                        <option>CE</option>
+                                        <option>IT</option>
+                                        <option>CHEM</option>
+                                        <option>EC</option>
+                                        <option>IC</option>
+                                        <option>MECH</option>
+                                        <option>CL</option>
+
+                                    </select>
+
+
+                                </div>
+                                <div class="col">
+                                    <select class="form-control form-control-lg" [(ngModel)]="sem">
+                                        <option>{{sem}}</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox">
+                                <label style="color:blanchedalmond;"><input type="checkbox"> Forgot password</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          
+                           <a (click)="validate()" class="btn btn-success btn-block"  role="button">SUBMIT</a>
+                            <a href="index.html" class="btn btn-success btn-block" role="button">BACK</a>
+
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+
+       
+
+
+</div>
+    </div></body>

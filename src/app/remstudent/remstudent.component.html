@@ -1,0 +1,120 @@
+<app-navadmin></app-navadmin>
+<body>
+    <div class="container " style="margin-left: 0px;"><br>
+        <div class="row">
+            <div class="col-md-3 " style="background-color: black;height: 650px;">
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a id="d" class="nav-link text-center" id="dd" routerLink="/addstudent" >ADD STUDENT <span
+                                class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" id="d" routerLink="/remstudent">REMOVE STUDENT
+                            <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" id="dd" routerLink="/addfaculty" >ADD FACULTY
+                            <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" id="dd" routerLink="/remfaculty">REMOVE FACULTY
+                            <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+    
+                        <!--     <a href="remfaculty.html" class=" btn btn-primary btn-lg btn-block" role="button">REMOVE FACULTY</a>-->
+    
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" id="dd" routerLink="/addann">UPLOAD NOTICE
+                            <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+    
+                        <!-- <a href="addann.html" class=" btn btn-primary btn-lg btn-block" role="button">UPLOAD NOTICE </a>-->
+    
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" id="dd" routerLink="/viewdet" >VIEW DETAILS <span
+                                class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+    
+                        <!-- <a href="#" class=" btn btn-primary btn-lg btn-block" role="button">VIEW DETAILS </a>-->
+    
+                    </div>
+                </div>
+                <br>
+                </div>
+                
+            <div class="col-md-9 ">
+    
+                <table>
+                    <br>
+    
+                    <tr>
+                        <td class="text-center">
+                            <p id="dem"> <b style="font-size: x-large;">ENTER STUDENT'S DETAILS HERE</b></p>
+                        </td>
+                    </tr>
+                    <tr>
+    
+                        <td>
+                            <div class="form-group">
+    
+                                <input type="text" class="form-control form-control-lg" [(ngModel)]="name"
+                                    placeholder="Enter studentname" required>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="form-group">
+    
+                                <input type="text" class="form-control form-control-lg" [(ngModel)]="pswd"
+                                    placeholder="Enter password" required>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td>
+                            <br>
+                            <a (click)="delstu()" class="btn btn-success btn-block btn-lg " role="button">REMOVE STUDENT</a>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="do" style="color:darkred;font-size: large;;"></p>
+                        </td>
+                    </tr>
+    
+                    </table>
+                    </div>
+    
+    
+    
+            
+        </div>
+    </div>
+    </body>
+    <app-footer></app-footer>

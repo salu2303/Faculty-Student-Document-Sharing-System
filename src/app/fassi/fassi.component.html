@@ -1,0 +1,82 @@
+<app-navfac></app-navfac>
+<main class="py-5">
+<br>
+<div class="container text-center">
+    <table class="table table-dark table-hover">
+
+            <thead>
+            <tr>
+                <th scope="col">Subject</th>
+                <th scope="col">Submitions Due Date</th>
+            
+               <th scope="col">Upload Books and Lecture materials here</th>
+               <th scope="col">View Assignments here</th>
+               
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr *ngFor="let d of fac">
+                <td> <a  id={{d.fac_sub}}
+                        (click)="uplood(d.fac_branch,d.fac_sem,d.fac_sub)">{{d.fac_sub}}</a>
+                </td>
+                <td>
+                    <input type="date" id="start" [(ngModel)]="date">
+                    </td>
+                <td>
+                    <form class="md-form" [formGroup]="myform">
+                        <input type="file" id="upld" (click)="uplood(d.fac_branch,d.fac_sem,d.fac_sub)"
+                            (change)="onFileChange($event)">
+
+                        <a class="btn btn-success  " (click)="save()" role="button">UPLOAD</a>
+
+                    </form>
+                </td>
+                <td>
+                    <a class="btn btn-success  " (click)="viewmy(d.fac_sub)" role="button">View Uploads</a>
+
+                </td>
+            </tr>
+
+        </tbody>
+
+
+    </table>
+
+    <div class="container text-center">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Here's your uploads..</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    
+                <tr *ngFor="let do of aa">
+                   <p style="font-weight: bold;"> {{do.path}}</p>
+                    </tr>
+                </tbody>
+    </table>
+    </div>
+</div>
+ 
+
+
+  <!--  <div class="container text-center">
+      <div *ngFor="let d of fac">
+      <button class="btn btn-lg btn-primary"  id={{d.fac_sub}} (click)="uplood(d.fac_branch,d.fac_sem,d.fac_sub)">{{d.fac_sub}}</button><br><br>
+     
+      <form class="md-form" [formGroup]="myform">
+        <input type="file" id="upld"(click)="uplood(d.fac_branch,d.fac_sem,d.fac_sub)" (change)="onFileChange($event)">
+        
+        <a  class="btn btn-success  " (click)="save()" role="button">UPLOAD</a>
+      
+    </form>
+  
+</div>
+  
+        </div>-->
+    </main>
+<app-footer></app-footer>

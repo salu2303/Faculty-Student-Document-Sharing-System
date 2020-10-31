@@ -1,0 +1,193 @@
+<app-navadmin></app-navadmin>
+
+<body>
+    <div class="container " style="margin-left: 0px;">
+        <br>
+        <div class="row">
+            <div class="col-md-3 " style="background-color: black;height: 650px;">
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a id="d" class="nav-link text-center" routerLink="/addstudent"
+                            id="dd">ADD STUDENT <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" routerLink="/remstudent" id="dd">REMOVE
+                            STUDENT
+                            <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" routerLink="/addfaculty" id="dd">ADD
+                            FACULTY
+                            <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" routerLink="/remfaculty" id="dd">REMOVE
+                            FACULTY
+                            <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+
+                        <!--     <a href="remfaculty.html" class=" btn btn-primary btn-lg btn-block" role="button">REMOVE FACULTY</a>-->
+
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" routerLink="/addann" id="dd">UPLOAD
+                            NOTICE
+                            <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+
+                        <!-- <a href="addann.html" class=" btn btn-primary btn-lg btn-block" role="button">UPLOAD NOTICE </a>-->
+
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <a class="nav-link text-center" routerLink="/viewdet" id="d">VIEW DETAILS <span
+                                class="sr-only">(current)</span></a>
+                        <div class="dropdown-divider"></div>
+
+                        <!-- <a href="#" class=" btn btn-primary btn-lg btn-block" role="button">VIEW DETAILS </a>-->
+
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div class="col-md-9 ">
+
+                <table>
+
+                    <br>
+                    <tr>
+                        <td class="text-center">
+                            <p id="dem"> <b style="font-size: x-large;">SEARCH FACULTY</b></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-row">
+                                <div class="col">
+                                    <select class="form-control form-control-lg" [(ngModel)]="branch">
+                                        <option>{{branch}}</option>
+                                        <option>CE</option>
+                                        <option>IT</option>
+                                        <option>CHEM</option>
+                                        <option>EC</option>
+                                        <option>IC</option>
+                                        <option>MECH</option>
+                                        <option>CL</option>
+
+                                    </select>
+
+                                    <!--     <input type="text" class="form-control form-control-lg" [(ngModel)]="branch"
+                                        placeholder="Enter branch" required>-->
+                                </div>
+
+                                <div class="col">
+                                    <select class="form-control form-control-lg" [(ngModel)]="sem">
+                                        <option>{{sem}}</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+
+                                    </select>
+
+                                    <!--<select  class="form-control form-control-lg" [(ngModel)]="sem">
+                                        <option>{{temp}}</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+
+                                    </select>-->
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <br>
+                            <a (click)="disp()" class="btn btn-success btn-block btn-lg " role="button">Search</a>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="do" style="color:darkred;font-size: large;;"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <table class="table table-dark table-hover">
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                       
+                                       
+                                       <th scope="col">Branch</th>
+                                        <th scope="col">Semester</th>
+                                        <th scope="col">Subject</th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody>
+                                    
+
+                                        <tr *ngFor="let d of admin">
+                                            <td> {{d.fac_name}}</td>
+                                            <td> {{d.fac_branch}}</td>
+                                            <td> {{d.fac_sem}}</td>
+                                            <td> {{d.fac_sub}}</td>
+
+                                        </tr>
+                                    
+                                </tbody>
+
+
+                            </table>
+                            <!--  <li *ngFor="let hero of admin">
+                                <h1 style="color: white;"> {{ hero.faculty_pswd }}</h1>
+                            </li>-->
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</body>
+<app-footer></app-footer>

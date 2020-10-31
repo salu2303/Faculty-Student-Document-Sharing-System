@@ -1,0 +1,129 @@
+<nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top ">
+    <a class="navbar-brand" href="#" style="color: blanchedalmond;">
+      <i class="em em-books" aria-role="presentation" aria-label="BOOKS"></i>Sharing Knowledge</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+           <!-- <a class="nav-link" href="tes.html" style="color: blanchedalmond;">Login</a>-->
+           <div class="dropdown">
+            <button class="btn btn-outline-light btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              login
+            </button>
+            <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+              <button class="dropdown-item" routerLink="admin">Admin</button>
+              <button class="dropdown-item text-center" onclick="document.getElementById('id01').style.display='block'" >Faculty</button>
+              <button class=" dropdown-item text-center" onclick="document.getElementById('id02').style.display='block'" >Student</button>
+            </div>
+          </div> 
+          </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/test" style="color: blanchedalmond;">About Us</a>
+          </li>
+        </ul>
+    </div>
+</nav>
+
+<div id="id01" class="modal">
+  
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <br><br><br>
+    <div class="container">
+      <input type="text" placeholder="Enter Username" [(ngModel)]="name" required>
+<br><br>
+      <input type="password" placeholder="Enter Password" [(ngModel)]="pswd" required>
+        <br><br>
+         <select class="form-control form-control-lg" [(ngModel)]="branch">
+            <option>{{branch}}</option>
+            <option>CE</option>
+            <option>IT</option>
+            <option>CHEM</option>
+            <option>EC</option>
+            <option>IC</option>
+            <option>MECH</option>
+            <option>CIVIL</option>
+  
+        </select><br>
+        <select class="form-control form-control-lg" [(ngModel)]="sem">
+          <option>{{sem}}</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+
+      </select> <br>
+      <button type="submit" (click)="validate()">Login</button>
+      
+    </div>
+  </div>
+
+  <div id="id02" class="modal">
+  
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <br><br><br>
+    <div class="container">
+      <input type="text" placeholder="Enter Username" [(ngModel)]="names" required><br><br>
+
+      <input type="password" placeholder="Enter Password" [(ngModel)]="pswds" required><br><br>
+        
+      <select class="form-control form-control-lg" [(ngModel)]="branchs">
+          <option>{{branch}}</option>
+          <option>CE</option>
+          <option>IT</option>
+          <option>CHEM</option>
+          <option>EC</option>
+          <option>IC</option>
+          <option>MECH</option>
+          <option>CIVIL</option>
+
+      </select><br>
+      <select class="form-control form-control-lg" [(ngModel)]="sems">
+        <option>Select Semester</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+
+    </select> <br>
+      <button type="submit" (click)="validates()">Login</button>
+    </div>
+  </div>
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var moda = document.getElementById('id02');
+window.onclick = function(event) {
+    if (event.target == moda) {
+        moda.style.display = "none";
+    }
+}
+
+</script>
+
+
+<body>
+<img src="assets\static\delfi-de-la-rua-A_InfAQM_lU-unsplash.jpg" class="img-fluid" alt="Responsive image">
+</body>
+<app-footer></app-footer>
